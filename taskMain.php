@@ -56,6 +56,7 @@
     </div>
 
     <div class="container well" id="tasks">
+        <h4>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</h4>
         <form name="logout" id="logout" action="logout.php" method="post" novalidate>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
@@ -64,6 +65,46 @@
             </div>
         </form>
     </div>
+
+      <div class="container well" id="tasks">
+        <h4>Cadastrar Task</h4>
+        <form name="cadastro" id="cadastro" action="cadastroTask.php" method="post" novalidate>
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="codigo">Código:</label>
+                <input type="text" class="form-control" id="codigo" name="codigo">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="descricao">Descrição:</label>
+                <input type="text" class="form-control" id="descricao" name="descricao">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="arquivo">Arquivo Anexo:</label>
+                <input type="text" class="form-control" id="arquivo" name="arquivo">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-default btn-block">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
 
 </body>
 </html>

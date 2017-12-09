@@ -17,8 +17,7 @@
 
 	if ($executa->rowCount() == 0){
 		echo "nao tem conta";
-		echo ("<script>alert('Dados inseridos com sucesso!');");
-		header("Location: index.html"); exit;
+		header("Location: index.html");echo ("<script>alert('Usuário ou senha inválidos!');</script>"); exit;
 	}else{
 		echo "tem conta";
 		if (!isset($_SESSION)) session_start();
