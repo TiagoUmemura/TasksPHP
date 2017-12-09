@@ -17,7 +17,15 @@
 
 	if ($executa->rowCount() == 0){
 		echo "nao tem conta";
+		echo ("<script>alert('Dados inseridos com sucesso!');");
+		header("Location: index.html"); exit;
 	}else{
 		echo "tem conta";
+		if (!isset($_SESSION)) session_start();
+
+		$_SESSION['UsuarioNome'] = $login;
+      	$_SESSION['UsuarioSenha'] = $pwd;
+      	
+      	header("Location: taskMain.php"); exit;
 	}
 ?>
