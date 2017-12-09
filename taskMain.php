@@ -68,7 +68,7 @@
 
       <div class="container well" id="tasks">
         <h4>Cadastrar Task</h4>
-        <form name="cadastro" id="cadastro" action="cadastroTask.php" method="post" novalidate>
+        <form name="cadastro" id="cadastro" action="cadastroTask.php" method="post" enctype="multipart/form-data" novalidate>
             <div class="row">
               <div class="form-group col-md-6 col-md-offset-3">
                 <label for="codigo">Código:</label>
@@ -93,7 +93,7 @@
             <div class="row">
               <div class="form-group col-md-6 col-md-offset-3">
                 <label for="arquivo">Arquivo Anexo:</label>
-                <input type="text" class="form-control" id="arquivo" name="arquivo">
+                <input type="file" name="arquivo" id="arquivo">
               </div>
             </div>
 
