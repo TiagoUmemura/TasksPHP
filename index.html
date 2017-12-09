@@ -24,18 +24,74 @@
 </head>
 
 <body id="page-top" class="index">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">WebSiteName</a>
+              <a class="navbar-brand" href="#">Tasks</a>
             </div>
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Page 1</a></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
+              <li><a href="#acesso">Acessar</a></li>
+              <li><a href="#registro">Registrar</a></li>
             </ul>
         </div>
     </nav>
+
+    <div class="container">
+        <hr>
+        <hr>
+    </div>
+
+    <div class="container well" id="acesso">
+        <div class="jumbotron text-center">
+          <h4>Acessar tasks</h4>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6 col-md-offset-3">
+              <label for="login_acesso">Login:</label>
+              <input type="text" class="form-control" id="login_acesso">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6 col-md-offset-3">
+              <label for="pwd_acesso">Password:</label>
+              <input type="password" class="form-control" id="pwd_acesso">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <button type="submit" class="btn btn-default btn-block">Acessar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container well" id="registro">
+        <div class="jumbotron text-center">
+          <h4>Criar conta</h4>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6 col-md-offset-3">
+              <label for="login">Login:</label>
+              <input type="text" class="form-control" id="login">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6 col-md-offset-3">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <button type="submit" class="btn btn-default btn-block">Registrar</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
