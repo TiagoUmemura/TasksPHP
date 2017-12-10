@@ -30,6 +30,7 @@
 		$executa = $pdo->query("SELECT * FROM tasks WHERE Codigo = '$codigo'");
 		foreach($executa as $resultado){
 			echo "Arquivo: ".$resultado['Arquivo'].";"."<br>";
+			//excluir arquivo antigo
 			unlink($resultado['Arquivo']);
 		}
 

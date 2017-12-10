@@ -144,6 +144,23 @@
         </form>
     </div>
 
+    <div class="container well" id="remover_task">
+        <h4>Remover Task</h4>
+        <form name="remocao" id="remocao" action="remocaoTask.php" method="post" enctype="multipart/form-data" novalidate>
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="codigo_remover">Código:</label>
+                <input type="text" class="form-control" id="codigo_remover" name="codigo_remover">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-default btn-block">Remover</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
