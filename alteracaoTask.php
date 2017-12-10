@@ -13,37 +13,44 @@
 	echo $target_file."<br>";
 	echo $_FILES['arquivo_alterar']['tmp_name']."<br>";
 
-	if($nome != ''){
-		echo "nome preenchido"."<br>";
-		$pdo->query("UPDATE tasks SET Nome = '$nome' WHERE Codigo = '$codigo'");
-	}
-
-	if($descricao != ''){
-		echo "descricao preenchido"."<br>";
-		$pdo->query("UPDATE tasks SET Descricao = '$descricao' WHERE Codigo = '$codigo'");
-	}
-
-	if($arquivo != ''){
-		echo "arquivo descricao preenchido"."<br>";
-
-		//procurar registro do arquivo com o codigo no POST
-		$executa = $pdo->query("SELECT * FROM tasks WHERE Codigo = '$codigo'");
-		foreach($executa as $resultado){
-			echo "Arquivo: ".$resultado['Arquivo'].";"."<br>";
-			//excluir arquivo antigo
-			unlink($resultado['Arquivo']);
+	//verificar se codigo da task existe
+	$executa = $pdo->query("SELECT * FROM tasks WHERE Codigo = '$codigo'");
+	if($executa->rowCount() == 0){
+		echo ("<script>alert('Task não encontrada!');window.location.assign('../project1/taskMain.php');</script>");
+	}else{
+		if($nome != ''){
+			echo "nome preenchido"."<br>";
+			$pdo->query("UPDATE tasks SET Nome = '$nome' WHERE Codigo = '$codigo'");
 		}
 
-		//update do caminho para o caminho do novo arquivo
-		$pdo->query("UPDATE tasks SET Arquivo = '$target_file' WHERE Codigo = '$codigo'");
+		if($descricao != ''){
+			echo "descricao preenchido"."<br>";
+			$pdo->query("UPDATE tasks SET Descricao = '$descricao' WHERE Codigo = '$codigo'");
+		}
 
-		//Upload novo arquivo
-		if (move_uploaded_file($_FILES['arquivo_alterar']['tmp_name'], $target_file)) {
-	        echo "The file ". basename( $_FILES["arquivo_alterar"]["name"]). " has been uploaded.";
-	    } else {
-	        echo "Upload failed with error code " . $_FILES['arquivo_alterar']['error'];
-	    }
+		if($arquivo != ''){
+			echo "arquivo descricao preenchido"."<br>";
+
+			//procurar registro do arquivo com o codigo no POST
+			$executa = $pdo->query("SELECT * FROM tasks WHERE Codigo = '$codigo'");
+			foreach($executa as $resultado){
+				echo "Arquivo: ".$resultado['Arquivo'].";"."<br>";
+				//excluir arquivo antigo
+				unlink($resultado['Arquivo']);
+			}
+
+			//update do caminho para o caminho do novo arquivo
+			$pdo->query("UPDATE tasks SET Arquivo = '$target_file' WHERE Codigo = '$codigo'");
+
+			//Upload novo arquivo
+			if (move_uploaded_file($_FILES['arquivo_alterar']['tmp_name'], $target_file)) {
+		        echo "The file ". basename( $_FILES["arquivo_alterar"]["name"]). " has been uploaded.";
+		    } else {
+		        echo "Upload failed with error code " . $_FILES['arquivo_alterar']['error'];
+		    }
+		}
+
+		//header("Location: taskMain.php");
+		echo ("<script>alert('Task alterada com sucesso!');window.location.assign('../project1/taskMain.php');</script>");
 	}
-
-	header("Location: taskMain.php");
 ?>

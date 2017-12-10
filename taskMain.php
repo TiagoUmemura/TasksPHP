@@ -42,10 +42,10 @@
             </div>
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#Cadastrar">Cadastrar</a></li>
-              <li><a href="#Alterar">Alterar</a></li>
-              <li><a href="#Remover">Remover</a></li>
-              <li><a href="#Listar">Listar</a></li>
+              <li><a href="#cadastrar_task">Cadastrar</a></li>
+              <li><a href="#alterar_task">Alterar</a></li>
+              <li><a href="#remover_task">Remover</a></li>
+              <li><a href="#listar_task">Listar</a></li>
             </ul>
         </div>
     </nav>

@@ -37,7 +37,7 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
-INSERT INTO `tasks` VALUES (1,'testealtr','alterdesc','uploads/InteraJr.pdf'),(2,'task2','desc2','uploads/treemapexemplo.png'),(4,'nome0444','desc0444','uploads/treemap1ano.png'),(5,'alternome5','aterdesct5','uploads/horario2016-1.pdf');
+INSERT INTO `tasks` VALUES (1,'testealtr','alterdesc','uploads/InteraJr.pdf'),(2,'task2','desc2','uploads/treemapexemplo.png'),(3,'asdasd','weqweqwe','uploads/music1.png'),(4,'naoexiste','descnaoexite','uploads/correlacao.png'),(5,'alterar5555555','desc55555555','uploads/fluxogramaslide.png'),(6,'tste6','asdasd','uploads/metricaex.png');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('teste','teste'),('teste2','123'),('teste3','1234'),('umemuratiago@gmail.com','12345');
+INSERT INTO `user` VALUES ('teste','teste'),('teste2','123'),('teste3','1234'),('teste5','555'),('umemuratiago@gmail.com','12345');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -74,4 +74,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-10  9:22:05
+-- Dump completed on 2017-12-10 11:39:59
