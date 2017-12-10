@@ -162,6 +162,18 @@
         </form>
     </div>
 
+    <div class="container well" id="listar_task">
+        <h4>Listar Tasks</h4>
+        <form name="listar" id="listar" action="listarTasks.php" method="get" enctype="multipart/form-data" novalidate>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-default btn-block">Listar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
 
