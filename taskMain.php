@@ -66,7 +66,7 @@
         </form>
     </div>
 
-      <div class="container well" id="tasks">
+      <div class="container well" id="cadastrar_task">
         <h4>Cadastrar Task</h4>
         <form name="cadastro" id="cadastro" action="cadastroTask.php" method="post" enctype="multipart/form-data" novalidate>
             <div class="row">
@@ -100,6 +100,45 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <button type="submit" class="btn btn-default btn-block">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container well" id="alterar_task">
+        <h4>Alterar Task</h4>
+        <form name="alteracao" id="alteracao" action="alteracaoTask.php" method="post" enctype="multipart/form-data" novalidate>
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="codigo_alterar">Código:</label>
+                <input type="text" class="form-control" id="codigo_alterar" name="codigo_alterar">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="nome_alterar">Nome:</label>
+                <input type="text" class="form-control" id="nome_alterar" name="nome_alterar">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="descricao_alterar">Descrição:</label>
+                <input type="text" class="form-control" id="descricao_alterar" name="descricao_alterar">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-md-offset-3">
+                <label for="arquivo_alterar">Arquivo Anexo:</label>
+                <input type="file" name="arquivo_alterar" id="arquivo_alterar">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-default btn-block">Alterar</button>
                 </div>
             </div>
         </form>
